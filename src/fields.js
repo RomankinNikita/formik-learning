@@ -32,7 +32,9 @@ export const SelectField = ({ field, options }) => {
       <Field name={name} component="select" id={name} className="form-control">
         {/* Render options */}
         {Object.entries(options).map(([value, label]) => (
-          <option value={value}>{label}</option>
+          <option key={value} value={value}>
+            {label}
+          </option>
         ))}
       </Field>
     </div>
